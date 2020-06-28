@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carlist>
+    <car>
+        <model>S</model>
+        <picture>media/s.jpg</picture>
+        <system>AWD(사륜구동)</system>
+        <efficiency>480 km (4.2 km/kWh)</efficiency>
+        <highspeed>261 km/h</highspeed>
+        <zeroback>2.5 secs</zeroback>
+        <price>₩132,990,000</price>
+    </car>
+    <car>
+        <model>3</model>
+        <picture>media/3.jpg</picture>
+        <system>AWD(사륜구동)</system>
+        <efficiency>415 km (4.7 km/kWh)</efficiency>
+        <highspeed>261 km/h</highspeed>
+        <zeroback>3.4 secs</zeroback>
+        <price>₩53,690,000</price>
+    </car>
+    <car>
+        <model>X</model>
+        <picture>media/x.jpg</picture>
+        <system>AWD(사륜구동)</system>
+        <efficiency>421 km (3.7 km/kWh)</efficiency>
+        <highspeed>250 km/h</highspeed>
+        <zeroback>2.8 secs</zeroback>
+        <price>₩115,990,000</price>
+    </car>
+    <car>
+        <model>Y</model>
+        <picture>media/y.jpg</picture>
+        <system>AWD(사륜구동)</system>
+        <efficiency>480 km (WLTP 기준)</efficiency>
+        <highspeed>250 km/h</highspeed>
+        <zeroback>3.7 secs</zeroback>
+        <price>₩81,340,000</price>
+    </car>
+</carlist>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rocketList>
+  <rocket operation="퇴역">
+    <img>media/falcon1.jpg</img>
+    <date>2006/03/24</date>
+    <name>Falcon1</name>
+    <link>falcon1</link>
+  </rocket>
+  <rocket operation="운용중">
+    <img>media/falcon9.jpg</img>
+    <date>2010/06/04</date>
+    <name>Falcon9</name>
+    <link>falcon9</link>
+  </rocket>
+  <rocket operation="운용중">
+    <img>media/falconHeavy.jpg</img>
+    <date>2018/02/06 ~</date>
+    <name>Falcon Heavy</name>
+    <link>falconHeavy</link>
+  </rocket>
+  <rocket operation="개발중">
+    <img>media/SLS.jpg</img>
+    <date>2022/?/? ~</date>
+    <name>SLS</name>
+    <link>SLS</link>
+  </rocket>
+</rocketList>

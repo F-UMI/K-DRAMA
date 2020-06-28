@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stationlist>
+  <station country="미국">
+    <img>media/nasa.png</img>
+    <name>NASA</name>
+    <founded>1958</founded>
+    <site>https://www.nasa.gov/</site>
+  </station>
+  <station country="미국">
+    <img>media/spacex.png</img>
+    <name>SPACE X</name>
+    <founded>2002</founded>
+    <site>https://www.spacex.com/</site>
+  </station>
+  <station country="러시아">
+    <img>media/russia.png</img>
+    <name>POCKOCMOC</name>
+    <founded>1992</founded>
+    <site>http://www.roscosmos.ru/</site>
+  </station>
+  <station country="중국">
+    <img>media/china.png</img>
+    <name>CNSA</name>
+    <founded>1993</founded>
+    <site>http://www.cnsa.gov.cn/english/</site>
+  </station>
+</stationlist>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TESLA</title>
+
+  <!-- JQUERRY -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="css/swiper.min.js"></script>
+  <!-- JQUERY THEME -->
+  <link rel="stylesheet" href="tesla_themes/tesla.min.css" />
+  <link rel="stylesheet" href="tesla_themes/jquery.mobile.icons.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tesla.css">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story:400" rel="stylesheet">
+  <style>
+    .ui-icon-spacex:after {
+      background: url(media/spacex_logo.png);
+      background-size: 22px 22px;
+    }
+
+    .ui-icon-bars_made:after {
+      background: url(media/bars.png);
+      background-size: 24px 24px;
+    }
+
+    .ui-icon-tesla_link:after {
+      background: url(media/tesla_logo2.png);
+      background-size: 24px 24px;
+    }
+  </style>
+
+  <!-- SCRIPT -->
+  <script src="script/tesla_carlist.js"></script>
+  <script src="script/tesla_load.js"></script>
+  <script src="script/tesladbHandle.js"></script>
+  <script>
+    $(document).ready(function() {
+      <!--CSS -->
+      console.log("READY!");
+
+
+      <!-- SWIFER -->
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+
+      <!-- ANIMATE -->
+      $('.logo').slideDown(1000);
+      $('')
+
+        <!--DB -->
+        openDB();
+      createTable();
+      // 이벤트 함수 정의
+      $('#cancel1').click(function() {
+        $('#SYS1').val('미정').attr('selected', 'selected');
+        $('#SYS1').selectmenu('refresh');
+      });
+
+
+    });
+
+    <!-- FUNCTION -->
+    function bub(id) {
+      var bubId = $('div').find(id);
+      bubId.toggle();
+    };
+
+    function search1() {
+      var model1 = $('#MODEL2').val();
+      selectTesla1(model1);
+    };
+
+    function search2() {
+      var model2 = $('#MODEL3').val();
+      selectTesla2(model2);
+    };
+
+    function first() {
+      position = 'first';
+      listTesla();
+    };
+
+    function prev() {
+      position = 'prev';
+      listTesla();
+    };
+
+    function next() {
+      position = 'next';
+      listTesla();
+    };
+
+    function last() {
+      position = 'last';
+      listTesla();
+    };
+  </script>
+</head>
+<!--=================================================================================================================================================-->
+<body>
+
+
+  <!-- TESLA  -->
+  <div data-role="page" id="tesla">
+    <!-- Header -->
+    <div data-role="header" id="header">
+      <a id="h_link" href="#sidebar1" data-icon="bars_made" data-inline="true">MENU</a>
+      <h1> &nbsp;</h1>
+      <a id="h_link" data-icon="spacex" data-iconpos="notext" onclick="location.href='space_x.html'"></a>
+    </div>
+
+    <!-- PANEL -->
+    <div data-role="panel" id="sidebar1" data-display="overlay">
+      <ul data-role="listview">
+        <li data-icon="delete" data-inline="true"><a id="move" href="#" data-rel="close">&nbsp;</a></li>
+        <li><a href="#tesla" id="move">TESLA</a></li>
+        <li><a href="#carlist" id="move">CARLIST</a></li>
+        <img src="media/tesla_change.gif" alt="">
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div data-role="content" class="content">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="logo" align="center">
+              <br>
+              <img src="media/tesla_logo1.png">
+              <br> <br> <br>
+            </div>
+            <table class="table" border="1px solid #cd5c5c">
+              <tr>
+                <td id="td">설립일</td>
+                <td>2003년 7월 1일</td>
+              </tr>
+              <tr>
+                <td id="td">설립자</td>
+                <td><a href="space#founder"><strong>일론 머스크</strong></a></td>
+              </tr>
+              <tr>
+                <td>본사</td>
+                <td rowspan="2">미국 캘리포니아 팔로 알토 <br><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12679.175610519844!2d-122.150325!3d37.394706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xccc17e4da6b38370!2z7YWM7Iqs6528IEhR!5e0!3m2!1sko!2skr!4v1593095371860!5m2!1sko!2skr"
+                    width="250" height="170" frameborder="0" style="border: 1pt solid #edaeaa;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> </td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td id="td">&nbsp;사업분야 &nbsp; </td>
+                <td>자동차 제조 및 판매업</td>
+              </tr>
+              <tr>
+                <td id="td">직원 수</td>
+                <td>약 5만명</td>
+              </tr>
+              <tr>
+                <td id="td">링크</td>
+                <td><a id="page_link" target="_blank" data-role="button" data-icon="tesla_link" data-inline="true" data-iconpos="notext" href="https://www.tesla.com/ko_kr/"></a></li>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="swiper-slide">
+            <p>
+              <strong>테슬라(TESLA)</strong>는 일론 머스크가 <strong>'니콜라 테슬라'</strong>로부터 상호명을 따와 만든 자동차 회사로서,
+              주로 <strong>전기자동차와 자동차 소프트웨어, 에너지 저장장치(전지)</strong>를 제조하는 미국의 기업으로 <strong>실리콘밸리</strong>에 위치해 있다.
+              <br><br>
+              기존의 전기자동차의 작고, 못생기고, 느리고, 주행거리가 짧은 형태의 이미지를 깨부수고 전기차만의 장점을 <strong>극대화</strong> 하며 그 성능과 외관까지 붙잡은
+              테슬라는 다른 자동차 기업에 비하면 매우 신생인 업체이지만, <strong>전세계 전기 자동차 판매량 1위</strong>, 미국 상장기업 중 최대 <strong>31위</strong>까지 도달한 거대기업으로서
+              그 입지를 단단히 하고 있다.
+              <br><br>
+              2016년을 기점으로 우리나라에서도 <strong>'테슬라코리아'</strong>로 입점을 하며 매장개설 및 한국어 홈페이지까지 만들며 우리나라 사람들의 눈길을 끌었고,
+              이후 2020년 3월에는 <strong>한국 수입차량 월간 판매량 1위</strong>를 기록하여 우리나라에서도 인기를 얻고있다.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <div data-role="navbar" id="db_nav">
+              <ul>
+                <li><a id="insertBtn" data-ajax="true">삽입</a></li>
+                <li><a id="deleteBtn">삭제</a></li>
+                <li><a id="searchBtn">검색</a></li>
+              </ul>
+            </div>
+            <div id="contentArea">
+              <h3 id="wait">WAITING....</h3>
+            </div>
+          </div>
+        </div>
+        <br> <br>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+      <div data-role="navbar" class="navbar">
+        <ul>
+          <li><a id="foo-nav" data-icon="back" href="javascript:history.back(-1)"></a></li>
+          <li><a id="foo-nav" data-icon="refresh" href="javascript:location.reload()"></a></li>
+          <li><a id="foo-nav" data-icon="forward" href="javascript:history.go(1)"></a></li>
+        </ul>
+        <h5> Copyright © 2020 YUNS All Rights Reserved. </h5>
+      </div>
+    </div>
+
+
+  </div>
+<!--=================================================================================================================================================-->
+
+  <!-- TESLA2 -->
+  <div data-role="page" id="carlist">
+    <!-- Header -->
+    <div data-role="header" id="header">
+      <a id="h_link" href="#sidebar2" data-icon="bars_made" data-inline="true">MENU</a>
+      <h1 style="color:white;"> TESLA </h1>
+      <a id="h_link" data-icon="spacex" data-iconpos="notext" onclick="location.href='space_x.html'"></a>
+    </div>
+
+    <!-- PANEL -->
+    <div data-role="panel" id="sidebar2" data-display="overlay">
+      <ul data-role="listview">
+        <li data-icon="delete" data-inline="true"><a id="move" href="#" data-rel="close">&nbsp;</a></li>
+        <li><a href="#tesla" id="move">TESLA</a></li>
+        <li><a href="#carlist" id="move">CARLIST</a></li>
+        <img src="media/tesla_change.gif" alt="">
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div data-role="content" id="carlistArea">
+      <table border="1px solid #cd5c5c" class="table">
+        <tr>
+          <td colspan="2" class="carImg"><img width="300px" height="170px" src="" id="carImg"></td>
+        </tr>
+        <tr>
+          <td>MODEL</td>
+          <td><span id="carModel"></span></td>
+        </tr>
+        <tr>
+          <td>구동방식</td>
+          <td><span id="carSystem"></span></td>
+        </tr>
+        <tr>
+          <td>연비</td>
+          <td><span id="carEff"></span></td>
+        </tr>
+        <tr>
+          <td>최대시속</td>
+          <td><span id="carHigh"></span></td>
+        </tr <tr>
+        <td>제로백</td>
+        <td><span id="carZero"></span></td>
+        </tr>
+        <tr>
+          <td>가격</td>
+          <td><span id="carPrice"></span></td>
+        </tr>
+      </table>
+      <div data-role="controlgroup" data-type="horizontal" id="btngroup" align="center">
+        <input type="button" data-inline="true" name="btnFirst" value="처음" />
+        <input type="button" data-inline="true" name="btnPrevious" value="이전" />
+        <input type="button" data-inline="true" name="btnNext" value="다음" />
+        <input type="button" data-inline="true" name="btnLast" value="마지막" />
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+      <div data-role="navbar" class="navbar">
+        <ul>
+          <li><a id="foo-nav" data-icon="back" href="javascript:history.back(-1)"></a></li>
+          <li><a id="foo-nav" data-icon="refresh" href="javascript:location.reload()"></a></li>
+          <li><a id="foo-nav" data-icon="forward" href="javascript:history.go(1)"></a></li>
+        </ul>
+        <h5> Copyright © 2020 YUNS All Rights Reserved. </h5>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</body>
+
+
+</html>

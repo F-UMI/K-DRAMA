@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="script/tesladbHandle.js"></script>
+</head>
+
+<!-- INSERT PAGE -->
+<body>
+  <div id="insertPage">
+    <form name="form1">
+      <h2 align="center">INSERT</h2>
+      <div class="ui-body ui-body-a gap">
+        <label for="SYS1" class="select">구동방식:</label>
+        <select name="SYS1" id="SYS1" data-native-menu="false" data-mini="true" data-inline="true">
+          <option value="0">선택</option>
+          <option value="2">2WD(이륜구동)</option>
+          <option value="4">AWD(사륜구동)</option>
+        </select>
+        <label for="MODEL1">MODEL:</label>
+        <input type="text" name="MODEL1" id="MODEL1" value="" data-mini="true">
+        <label for="EFF1">주행가능거리(1회충전-km):</label>
+        <input type="text" name="EFF1" id="EFF1" value="" data-mini="true">
+        <label for="HIGH1">최고속도(km/h):</label>
+        <input type="text" name="HIGH1" id="HIGH1" value="" data-mini="true">
+        <label for="ZERO1">제로백(sec):</label>
+        <input type="text" name="ZERO1" id="ZERO1" value="" data-mini="true">
+        <label for="PRICE1">가격(₩):</label>
+        <input type="text" name="PRICE1" id="PRICE1" value="" data-mini="true">
+      </div>
+      <div class="ui-body">
+        <fieldset class="ui-grid-a">
+          <div align="center" class="ui-block-a">
+            <input type="reset" id="cancel1" value="취소">
+          </div>
+          <div align="center" class="ui-block-b">
+            <input type="button" id="submit1" onclick="insertTesla();" value="추가">
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+<!--=================================================================================================================================================-->
+
+<!-- DELETE PAGE -->
+  <div id="deletePage">
+    <form name="form2">
+      <h2 align="center">DELETE</h2>
+      <div class="ui-body ui-body-a gap">
+        <label for="MODEL2">MODEL:</label>
+        <input type="text" name="MODEL2" id="MODEL2" value="" data-mini="true">
+        <label for="SYS2">구동방식(2:2WD/4:AWD):</label>
+        <input type="text" name="SYS2" id="SYS2" value="" data-mini="true">
+        <label for="EFF2">주행가능거리(1회충전-km):</label>
+        <input type="text" name="EFF2" id="EFF2" value="" data-mini="true">
+        <label for="HIGH2">최고속도(km/h):</label>
+        <input type="text" name="HIGH2" id="HIGH2" value="" data-mini="true">
+        <label for="ZERO2">제로백(sec):</label>
+        <input type="text" name="ZERO2" id="ZERO2" value="" data-mini="true">
+        <label for="PRICE2">가격(₩):</label>
+        <input type="text" name="PRICE2" id="PRICE2" value="" data-mini="true">
+      </div>
+      <div class="ui-body">
+        <fieldset class="ui-grid-b">
+          <div align="center" class="ui-block-a">
+            <input type="reset" id="cancel2" value="취소" />
+          </div>
+          <div align="center" class="ui-block-b">
+            <input type="button" id="submit2" onclick="deleteTesla();" value="삭제" />
+          </div>
+          <div align="center" class="ui-block-c">
+            <input type="button" id="search2" onclick="search1();" value="검색" />
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </div>
+<!--=================================================================================================================================================-->
+
+
+<!-- SEARCH PAGE -->
+  <div id="searchPage">
+    <h2 align="center">SEARCH</h2>
+    <div class="ui-body ui-body-a gap">
+      <fieldset align="center" data-role="controlgroup" data-type="horizontal" style="text-align:right">
+        <input type="button" onclick="first();" value="|<" />
+        <input type="button" onclick="prev();" value="<" />
+        <input type="button" onclick="next();" value=">" />
+        <input type="button" onclick="last();" value=">|" />
+      </fieldset>
+      <label for="MODEL3">MODEL:</label>
+      <input type="text" name="MODEL3" id="MODEL3" value="" data-mini="true">
+      <label for="SYS3">구동방식(2:2WD/4:AWD):</label>
+      <input type="text" name="SYS3" id="SYS3" value="" data-mini="true">
+      <label for="EFF3">주행가능거리(1회충전-km):</label>
+      <input type="text" name="EFF3" id="EFF3" value="" data-mini="true">
+      <label for="HIGH3">최고속도(km/h):</label>
+      <input type="text" name="HIGH3" id="HIGH3" value="" data-mini="true">
+      <label for="ZERO3">제로백(sec):</label>
+      <input type="text" name="ZERO3" id="ZERO3" value="" data-mini="true">
+      <label for="PRICE3">가격(₩):</label>
+      <input type="text" name="PRICE3" id="PRICE3" value="" data-mini="true">
+    </div>
+    <div class="ui-body">
+      <fieldset class="ui-grid-a">
+        <div class="ui-block-a">
+          <input type="reset" id="cancel3" value="취소" />
+        </div>
+        <div class="ui-block-b">
+          <input type="button" id="search3" onclick="search2();" value="검색" />
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</body>
+
+</html>

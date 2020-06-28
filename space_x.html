@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPACE X</title>
+
+  <!-- JQUERRY -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <script src="css/swiper.min.js"></script>
+
+  <!-- JQUERY THEME -->
+  <link rel="stylesheet" href="spacex_themes/space.min.css" />
+  <link rel="stylesheet" href="spacex_themes/jquery.mobile.icons.min.css" />
+
+  <!--CSS -->
+  <link rel="stylesheet" href="css/space_x.css">
+  <link href="https://fonts.googleapis.com/css?family=Poor+Story:400" rel="stylesheet">
+
+  <style>
+    .ui-icon-tesla:after {
+      background: url(media/tesla_logo.png);
+      background-size: 22px 22px;
+    }
+
+    .ui-icon-spacex_link:after {
+      background: url(media/spacex_logo2.png);
+      background-size: 22px 22px;
+    }
+  </style>
+  <!--SCRIPT -->
+  <script src="script/space_x.js"></script>
+  <script src="script/project.js"></script>
+  <script src="script/rocket.js"></script>
+  <!--=================================================================================================================================================-->
+  <script>
+    $(document).ready(function() {
+      <!-- CSS -->
+      console.log("READY!");
+
+
+      <!-- SWIFER -->
+      var mySwiper = new Swiper('.swiper-container', {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+        },
+      });
+
+      <!-- ANIMATE -->
+      $('.logo').slideDown(1000);
+      $('')
+    });
+
+    <!-- FUNCTION -->
+    function bub(id) {
+      var bubId = $('div').find(id);
+      bubId.toggle();
+    };
+
+    function imgExpand(url) {
+      var img = new Image();
+      img.src = url;
+      var img_width = img.width;
+      var win_width = img.width;
+      var img_height = img.height;
+      var win = img.height;
+      var OpenWindow = window.open('', '_blank', 'width=' + img_width + ', height=' + img_height + ', menubars=no, scrollbars=none');
+      OpenWindow.document.write("<style>body{ margin:0px;}</style><img src='" + url + "' width='" + win_width + "'>");
+    }
+  </script>
+</head>
+
+<!--=================================================================================================================================================-->
+
+<body>
+
+  <!-- SPACE_X -->
+  <div data-role="page" id="space_x">
+    <!-- Header -->
+    <div data-role="header">
+      <a href="#sidebar1" data-icon="bars" data-inline="true">MENU</a>
+      <h1> &nbsp;</h1>
+      <a id="tesla" data-icon="tesla" data-iconpos="notext" onclick="location.href='tesla.html'"></a>
+    </div>
+
+    <!-- PANEL -->
+    <div data-role="panel" id="sidebar1" data-display="overlay">
+      <ul data-role="listview">
+        <li data-icon="delete" data-inline="true"><a id="move" href="#" data-rel="close">&nbsp;</a></li>
+        <li><a href="#space_x" id="move">SPAXE X</a></li>
+        <li><a href="#founder" id="move">FOUNDER</a></li>
+        <li><a href="#project" id="move">PROJECT & ROCKET</a></li>
+        <video src="media/launch.webm" autoplay loop></video>
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div data-role="content" class="content">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="logo" align="center">
+              <br>
+              <img src="media/SpaceX-Logo.svg">
+              <br> <br> <br>
+            </div>
+            <table class="table" border="1px solid white">
+              <tr>
+                <td>설립일</td>
+                <td>2002년 5월 6일</td>
+              </tr>
+              <tr>
+                <td>설립자</td>
+                <td><a href="#founder"><strong>일론 머스크</strong></a></td>
+              </tr>
+              <tr>
+                <td>본사</td>
+                <td rowspan="2">미국 캘리포니아 호손 <br><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2009896.797093194!2d-120.05862960134088!3d34.17176727706733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b5dee46db32d%3A0x5589bf4232c10232!2sSpacex!5e0!3m2!1sko!2skr!4v1591524617530!5m2!1sko!2skr"
+                    width="250" height="170" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> </td>
+              </tr>
+              <tr></tr>
+              <tr>
+                <td>&nbsp;사업분야 &nbsp; </td>
+                <td>우주 수송 및 발사체 개발</td>
+              </tr>
+              <tr>
+                <td>직원 수</td>
+                <td>약 7000명</td>
+              </tr>
+              <tr>
+                <td>링크</td>
+                <td><a target="_blank" data-role="button" data-icon="spacex_link" data-inline="true" data-iconpos="notext" href="https://www.spacex.com/"></a></li>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="swiper-slide">
+            <br>
+            <h3>SpaceX <br> (Space Exploration Technologies Corps.)</h3>
+            일론 머스크(Elon Musk)가 "정부 기관 담당이던 우주 항공 산업을 <strong> 민간 벤처기업에서 진행 하면 어떨까?</strong>" 하는 발상과 함께 세워진
+            Space X는 우주로의 <strong>수송 비용을 획기적으로 절감하고</strong> <strong>화성을 식민지화</strong> 하겠다는 목표 설립된 미국의 항공우주
+            장비 제조/생산 및 우주 수송 업체가 되었다. <br> <br> 세계 최초의 민간 항공 우주 기업으로서 다양한 업적을 거두어 왔는데,
+            대표적으로 우주에 우주비행사를 태운 캡슐과 발사체를 발사해 성공한 <a href="#station" data-rel="dialog">항공 우주국 4곳</a><strong><sup>CLICK!!</sup></strong> 중 한곳이며
+            우주왕복선을 포함한 발사체 회수는 NASA와 함께 단 <strong>2곳</strong>, 세계 최초 로켓 1단 부스터 회수 등의 <strong>세계에서 유일무이한 기록들</strong>을 가지고 있다.
+            이러한 기록들은 SPACEX 의 위상을 보여준다.
+          </div>
+        </div>
+        <br><br>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+      <div data-role="navbar" class="navbar">
+        <ul>
+          <li><a data-icon="back" href="javascript:history.back(-1)"></a></li>
+          <li><a data-icon="refresh" href="javascript:location.reload()"></a></li>
+          <li><a data-icon="forward" href="javascript:history.go(1)"></a></li>
+        </ul>
+        <h5> Copyright © 2020 YUNS All Rights Reserved. </h5>
+      </div>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : 4place -->
+  <div data-role="page" id="station">
+    <div data-role="header">
+      <h1>항공 우주국</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" id="stationArea">
+      <form name="form1">
+
+        <table>
+          <tr>
+            <td colspan="2" class="statonImg"><img src="" id="stationImg"></td>
+          </tr>
+          <tr>
+            <td>이름: </td>
+            <td><input type="text" id="stationName" /></td>
+          </tr>
+          <tr>
+            <td>국가: </td>
+            <td><input type="text" id="stationCity" /></td>
+          </tr>
+          <tr>
+            <td>창립일: </td>
+            <td><input type="text" name="stationFound" /></td>
+          </tr>
+          <tr>
+            <td>링크: </td>
+            <td><a align="center" target="_blank" data-role="button" data-icon="location" data-inline="true" data-iconpos="notext" id="location" href=""></a></td>
+          </tr>
+        </table>
+        <div data-role="controlgroup" data-type="horizontal">
+          <input type="button" data-inline="true" name="btnFirst" value="처음" />
+          <input type="button" data-inline="true" name="btnPrevious" value="이전" />
+          <input type="button" data-inline="true" name="btnNext" value="다음" />
+          <input type="button" data-inline="true" name="btnLast" value="마지막" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- FOUNDER -->
+  <div data-role="page" id="founder">
+    <div data-role="header">
+      <a href="#sidebar2" data-icon="bars" data-inline="true">MENU</a>
+      <h1>SPACE X</h1>
+      <a id="tesla" data-icon="tesla" data-iconpos="notext"  onclick="location.href='tesla.html'"></a>
+    </div>
+
+    <!-- PANEL -->
+    <div data-role="panel" id="sidebar2" data-display="overlay">
+      <ul data-role="listview">
+        <li data-icon="delete" data-inline="true"><a id="move" href="#" data-rel="close">&nbsp;</a></li>
+        <li><a href="#space_x" id="move">SPAXE X</a></li>
+        <li><a href="#founder" id="move">FOUNDER</a></li>
+        <li><a href="#project" id="move">PROJECT & ROCKET</a></li>
+        <video src="media/launch.webm" autoplay loop></video>
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div data-role="content">
+      <table class="table elon" border="1px solid white">
+        <tr>
+          <td colspan="2"><img src="media/elonmusk.jpg" alt="일론 머스크 사진"></td>
+        </tr>
+        <tr>
+          <td id="td">이름</td>
+          <td>일론 머스크(Elon Reeve Musk)</td>
+        </tr>
+        <tr>
+          <td id="td">출생</td>
+          <td>1971년 6월 28일 (48세)</td>
+        </tr>
+        <tr>
+          <td id="td">국적</td>
+          <td>남아프리카 공화국<sup><a onclick="bub(bubble1);">[1]</a></sup>, 캐나다 , 미국</td>
+        </tr>
+        <tr>
+          <td id="td">학력</td>
+          <td>
+            프리토리아 보이즈 고등학교 졸업(-1989) <br>
+            퀸즈 대학교(1989-1992)<br>
+            펜실베니아 대학교 물리학, 경제학 학사 <br>
+            스탠퍼드 대학교 응용물리학, 재료과학 박사과정 중퇴<sup><a onclick="bub(bubble2);">[2]</a></sup>
+          </td>
+        </tr>
+        <tr>
+          <td id="td">경력</td>
+          <td>
+            <strong>X.com</strong> 창립자<sup><a onclick="bub(bubble3);">[3]</a></sup> <br>
+            現 <strong>테슬라</strong> 대표 이사 <br>
+            現 <strong>스페이스X</strong> CEO <br>
+            現 <strong>솔라시티</strong> 회장 <br>
+            現 <strong>OpenAI</strong> 공동 회장 <br>
+            現 <strong>뉴럴링크</strong> 회장 <br>
+          </td>
+        </tr>
+      </table>
+      <div class="bubble" id="bubble1">
+        <a>[1]</a> 남아프리카 출생
+      </div>
+      <div class="bubble" id="bubble2">
+        <a>[2]</a> 2일만에 그만두고 창업을 시작하였다.
+      </div>
+      <div class="bubble" id="bubble3">
+        <a>[3]</a> PayPal의 전산기업중 하나
+      </div>
+
+    </div>
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+      <div data-role="navbar" class="navbar">
+        <ul>
+          <li><a data-icon="back" href="javascript:history.back(-1)"></a></li>
+          <li><a data-icon="refresh" href="javascript:location.reload()"></a></li>
+          <li><a data-icon="forward" href="javascript:history.go(1)"></a></li>
+        </ul>
+        <h5> Copyright © 2020 YUNS All Rights Reserved. </h5>
+      </div>
+    </div>
+
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- PROJECT -->
+  <div data-role="page" id="project">
+    <div data-role="header">
+      <a href="#sidebar3" data-icon="bars" data-inline="true">MENU</a>
+      <h1>SPACE X</h1>
+      <a id="tesla" data-icon="tesla" data-iconpos="notext"  onclick="location.href='tesla.html'"></a>
+    </div>
+
+    <!-- PANEL -->
+    <div data-role="panel" id="sidebar3" data-display="overlay">
+      <ul data-role="listview">
+        <li data-icon="delete" data-inline="true"><a id="move" href="#" data-rel="close">&nbsp;</a></li>
+        <li><a href="#space_x" id="move">SPAXE X</a></li>
+        <li><a href="#founder" id="move">FOUNDER</a></li>
+        <li><a href="#project" id="move">PROJECT & ROCKET</a></li>
+        <video src="media/launch.webm" autoplay loop></video>
+      </ul>
+    </div>
+
+    <!-- CONTENT -->
+    <div data-role="content" class="overflow">
+      <ul data-role="listview" id="projectListArea" data-divider-theme="b">
+      </ul>
+      <ul data-role="listview" id="rocketListArea" data-divider-theme="b">
+      </ul>
+    </div>
+    <div class="none">
+    </div>
+
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed" data-fullscreen="true" class="footer">
+      <div data-role="navbar" class="navbar">
+        <ul>
+          <li><a data-icon="back" href="javascript:history.back(-1)"></a></li>
+          <li><a data-icon="refresh" href="javascript:location.reload()"></a></li>
+          <li><a data-icon="forward" href="javascript:history.go(1)"></a></li>
+        </ul>
+        <h5> Copyright © 2020 YUNS All Rights Reserved. </h5>
+      </div>
+    </div>
+
+  </div>
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : starLink -->
+  <div data-role="page" id="starLink">
+    <div data-role="header">
+      <h1>starLink</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <img src="media/starlink-logo.png" alt="">
+      STARLINK 프로젝트는 Space x가 자체적으로 시행하는
+      <br> <strong>전세계 대상 위성 인터넷망 구축 프로젝트</strong>이다.
+      <br> <br> 그 목표는 바로 2020년 북미지역을 시작으로 전세계<sup><a onclick="bub(starLink_bub1)">[1]</a></sup> 에
+      <br>통신속도 <strong>1Gbps</strong>의 초고속 인터넷을 보급하겠다는 것이다.
+      <br> 이를 위해선 필요한 위성의 수는 모든 위성의 수보다도
+      <br>많으며<sup><a onclick="bub(starLink_bub2);">[2]</a></sup><sup><a onclick="bub(starLink_bub3)">[3]</a></sup>,
+      지구 전역을 아우르는 커버리지 구축이 필요하다.
+      <br> 이러한 대규모의 프로젝트 이기에 실현가능성의 의구심을 품는
+      <br>사람도 많지만, 이미 구글과 사모펀드로부터 10억달러의 투자를 받은 상태이다.
+      <br><br>이 프로젝트가 성공하게 된다면 Space X는 매년 <strong>300억달러의 이익</strong>을 얻게 되며
+      <strong>우주 인터넷의 공사의 기반</strong>을 다지게된다. <br>
+
+      <h4>발사 미션 일람</h4>
+      <table border="1px solid #efe8dc" width="250px">
+        <tr>
+          <th>번호</th>
+          <th>미션명</th>
+          <th>날짜</th>
+          <th>성공 여부</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>v0.9</td>
+          <td>2018/02/22</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tintin</td>
+          <td>2019/05/24</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>v1.0 L1</td>
+          <td>2019/11/11</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>v1.0 L2</td>
+          <td>2020/01/07</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>v1.0 L3</td>
+          <td>2020/01/29</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>v1.0 L4</td>
+          <td>2020/02/17</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>v1.0 L5</td>
+          <td>2020/03/18</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>v1.0 L6</td>
+          <td>2020/04/22</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>v1.0 L7</td>
+          <td>2020/06/04</td>
+          <td>성공</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>v1.0 L9</td>
+          <td>2020/06/13</td>
+          <td>성공</td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div class="bubble" id="starLink_bub1">
+      <a>[1]</a> 장소에 국한되지 않는다.(남극/사막...)
+    </div>
+    <div class="bubble" id="starLink_bub2">
+      <a>[2]</a> 저고도에 <strong>4425개</strong> 초저고도에 <strong>7518개</strong>의 위성이 필요하다.
+    </div>
+    <div class="bubble" id="starLink_bub3">
+      <a>[3]</a> 2020년 6월 3일 기준 <strong>482대</strong>의 위성이 궤도에 올려졌다.
+    </div>
+  </div>
+
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : deerMoon -->
+  <div data-role="page" id="deerMoon">
+    <div data-role="header">
+      <h1>deerMoon</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <img src="media/deermoon-logo.jpg" alt="">
+      <strong>deerMoon 프로젝트</strong>는 일본의 억만장자 마에자와 유사쿠<sup><a onclick="bub(deermoon_bub1);">[1]</a></sup>가
+      <br>구상하고 자금을 조달하는 <strong>달 관광/예술 프로젝트</strong>이다. <br>
+      <br>목표는 <strong>6~8명의 뛰어난 예술가들</strong><sup><a onclick="bub(deermoon_bub2);">[2]</a></sup>이 6일간의 일정으로 마에자와와 함께
+      달 주변을 <strong>무료</strong>로 여행하게 하는 것으로 실제로 진행하게 된다면 1972년 아폴로 17호 선장 진커넌(작고)이 달을
+      밟은 이유로 거의 반세기만에 인류가 달에 도달하는 기록을 낳게 된다.
+      <br><br>deerMoon 프로젝트는 Space x의 <strong>STARSHIP</strong>을 이용할 예정이며
+      <br> <strong>2023년 출발</strong>을 앞두고 있다.
+    </div>
+    <div class="bubble" id="deermoon_bub1">
+      <a>[1]</a> 일본 최대의 온라인 쇼핑몰 <strong>조조타운</strong>의 설립자
+    </div>
+    <div class="bubble" id="deermoon_bub2">
+      <a>[2]</a> 현재 1명만 참여의사를 밝혔고 그 대상은 <br>
+      영화 <strong>"La La LAND"</strong>의 감독인 데미안 샤젤이다.
+    </div>
+  </div>
+
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : rideShare -->
+  <div data-role="page" id="rideShare">
+    <div data-role="header">
+      <h1>소형위성 공동 발사 서비스</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <img src="media/rideshare-logo.webp" alt="">
+      <strong> SmallSat RideShare</strong> 은 Space x가 2019년 8월 5일 공개된 <br>
+      소형위성 공동 발사 서비스로 반덴버그 공군기지<sup><a onclick="bub(rideshare_bub1)">[1]</a></sup> 혹은 케이프 커내버럴 <sub><a onclick="bub(rideshare_bub2)">[2]</a></sub>
+      에서 발사되는 <strong>Falcon9</strong>로켓에 소형위성 어댑터를 달고 궤도에 올리는 것이다.
+      이러한 서비스의 제공 비용은 1kg당 5000달러 <br> 최대200kg 100만달러까지 인데,
+      가격, 신뢰성,궤도의 수등 다양한 요건으로 평가할경우 <strong>세계적으로도 경쟁력이 있는 입지</strong>의 인공위성 발사 서비스이다.
+      Space x는 이러한 가격 공표로 다른 출시 업체들에게도 압력을 불어 넣고있고 이는 <strong>타사의 발전 촉진</strong>또한 가져오고 있다.
+    </div>
+    <div class="bubble" id="rideshare_bub1">
+      <a href="#">[1]</a> 고도 600 ~ 800km의 태양 동기궤도(SSO)나 극궤도 발사
+    </div>
+    <div class="bubble" id="rideshare_bub2">
+      <a href="#">[2]</a> 지구 저궤도(LEO) 발사
+    </div>
+  </div>
+
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : reusable -->
+  <div data-role="page" id="reusable">
+    <div data-role="header">
+      <h1>1단 로켓 재활용</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <img src="media/spacex-landing.gif" alt="">
+      <small>Falcon9 의 1단 추진체가 해상 착륙장에 성공적으로 착륙하는 모습</small>
+      <p>
+        Space X가 민간 우주 산업체임에도 불구하고 주목을 받고 있는 이유는 <strong>'1단 로켓 재활용'</strong>에 있다.
+        본래 로켓발사 과정에는 엄청난 비용이 들게 되는데 그중 <strong>80%는 로켓에 관련된 부분</strong>으로 발사와 동시에
+        <br>버려지기 마련이다.
+        <br><br>하지만 일론 머스크는 이 로켓에 <strong>'재활용'</strong>이라는 개념을 접목 시켜 우주발사체를 발사하는 비용을 큰 폭으로 줄이는 방식을 찾아내었다.
+        <br>
+        <img src="media/timeline_landing.jpg" id="expand" onclick="imgExpand(this.src);">
+        <small>Falcon Heavy의 1단 추진체가 착륙을 하는 과정 <strong>(사진 CLICK!!)</strong> </small> <sup><a onclick="bub(reusable_bub1)">[1]</a></sup>
+        <br><br>이런 비용 감소는 더 많은 실험의 기회가 되었고 결과적으로는 <strong>우주의 상업화</strong> 또한 탄력을 받게 되었다.
+        비용의 한계으로 막혀있던 미래 우주 개발의 꿈이 Space X의 과감한 시도로 그 길이 트인것이다.
+      </p>
+    </div>
+    <div class="bubble" id="reusable_bub1">
+      <a href="#">[1]</a>이 과정을 알기쉽게 표현하자면 <strong>연필</strong>을 <strong>엠파이어 스테이트 빌딩위</strong>로 던졌다가
+      <strong>빌딩 반대편에 있는 신발상자</strong>에 <strong>수직으로 착륙</strong>시키는 정도의 난이도라고 한다.
+    </div>
+  </div>
+  <!-- SCRIPT -->
+  <script>
+
+
+
+  </script>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : falcon1 -->
+  <div data-role="page" id="falcon1">
+    <div data-role="header">
+      <h1>Falcon1</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <iframe width="350" height="220" src="https://www.youtube.com/embed/dLQ2tZEH6G0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        <strong>Falcon 1</strong>은 Space x가 처음으로 개발한 우주 발사체이다.
+        <br> <strong>세계최초 민간 개발 우주로켓</strong>으로 2006년에 처음 발사 되었고 이후 3년간 운용되었으나 곧 인공위성세의 가격이 올라 전세계에서 수요가 적다는 이유로 회사측이 퇴역시켰다.
+        <table border="1px solid #efe8dc" width="200px">
+          <tr>
+            <th>날짜</th>
+            <th>기록</th>
+          </tr>
+          <tr>
+            <td>2006/03/24</td>
+            <td>실패</td>
+          </tr>
+          <tr>
+            <td>2007/03/21</td>
+            <td>실패</td>
+          </tr>
+          <tr>
+            <td>2008/08/3</td>
+            <td>실패</td>
+          </tr>
+          <tr>
+            <td>2008/09/29</td>
+            <td>성공</td>
+          </tr>
+          <tr>
+            <td>2006/03/24</td>
+            <td>성공</td>
+          </tr>
+        </table>
+      </p>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : falcon9 -->
+  <div data-role="page" id="falcon9">
+    <div data-role="header">
+      <h1>Falcon9</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <iframe width="350" height="220" src="https://www.youtube.com/embed/Z4TXCZG_NEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        <strong>Falcon 9 Block 5</strong>는 팰컨9 계열 로켓의 최종 버전으로
+        <br> Space x가 개발한 우주 발사체이다.
+        <br>2005년부터 5년간의 개발뒤 2010년부터 운용에 들어가며
+        <br> 5단계의 업그레이드를 통해 현재까지 계속하여
+        <br>여러 미션을 수행하기 위해 발사되고 있다.
+      </p>
+      <table border="1px solid #efe8dc" width="300px">
+        <tr>
+          <th>날짜</th>
+          <th>기록</th>
+        </tr>
+        <tr>
+          <td>2015/12/22 </td>
+          <td><strong>세계최초</strong> 1단 추진체 육상착륙 성공</td>
+        </tr>
+        <tr>
+          <td>2016/04/08 </td>
+          <td><strong>세계최초</strong> 1단 추진체 해상착륙 성공</td>
+        </tr>
+        <tr>
+          <td>2017/03/30 </td>
+          <td><strong>세계최초</strong> 1단 추진체 재사용 성공</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : falconHeavy -->
+  <div data-role="page" id="falconHeavy">
+    <div data-role="header">
+      <h1>Falcon Heavy</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <iframe width="350" height="210" src="https://www.youtube.com/embed/OtIMeAt2lTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        <strong>Falcon Heavy</strong> 는 심우주 탐사를 위해 개발한 대형 로켓으로
+        <br>Space X의, 현존하는 로켓중 가장 강력한 로켓이다.
+        <br> 특히 페이로드 테스트 발사에서 무게를 맞추는
+        <br> 용도를 콘크리트 대신 <strong>테슬라의 로드스터</strong>
+        <br> 모델을 사용하여 세계적인 이목을 끌었고,
+        <br> 테스트 발사(및 1차로켓 2개 회수) 성공으로 이어져
+        <br> <strong>'우주에서 가장빠른 자동차'</strong>라는 기네스북 기록에 올랐다.
+      </p>
+      <table border="1px solid #efe8dc" width="300px">
+        <tr>
+          <th>날짜</th>
+          <th>기록</th>
+        </tr>
+        <tr>
+          <td>2018/02/06</td>
+          <td>성공 (페이로드 테스트 발사)</td>
+        </tr>
+        <tr>
+          <td>2019/04/12 </td>
+          <td>성공 (상업용 위성)</td>
+        </tr>
+        <tr>
+          <td>2019/0/30 </td>
+          <td>성공 (미 공군 실험 프로젝트)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+
+  <!-- dialog : SLS -->
+  <div data-role="page" id="SLS">
+    <div data-role="header">
+      <h1>STARSHIP</h1>
+    </div>
+    <!-- CONTENT -->
+    <div data-role="content" class="dialog">
+      <iframe width="350" height="210" src="https://www.youtube.com/embed/wzFQJUzoUvM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <p>
+        <strong>STARSHIP</strong>은 Space X에서 개발중인 다목적 초대형 우주 발사체로
+        단기적으로는 위 두 로켓 (Falcon1/Falcon9)의 <strong>대체 대형 로켓</strong>,
+        <br>장기적으로는 <strong>달과 화성 탐사, 그리고 행성간 탐사 계획</strong>까지
+        고려하여 설계된 기체이다. <br> <br>
+        이 프로젝트를 지금까지 수행된 우주 프로젝트들에 비해 너무나 앞서나간 것 처럼 보여 실현가능성의
+        의구심을 표현하는것 도 어찌보면 당연하지만, 이것은 그저 NASA <strong>1970년대 끝을 내었던 프로그램</strong><sup><a onclick="bub(sls_bub1)">[1]</a></sup>의 연장선이며
+        스페이스 X는 국가기관의 정치적인 알력, 무관심으로 인해 좌초된 프로젝트를 <strong>민영기업의 손</strong>으로 해보려는 것이다.
+        STARSHIP은 NASA가 진행중인 <strong>아르테미스 계획</strong>에 채택되어 주 임무를 수행할 발사체의 후보로 지정되었다.
+      </p>
+      <h4>SLS 구상도</h4>
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><img src="media/sls_launch.png" width="98%" height="95%"></div>
+        <div class="ui-block-b"><img src="media/sls_arrive.png" width="98%" height="95%"></div>
+        <div class="ui-block-a"><img src="media/sls_flight.png" width="98%" height="95%"></div>
+        <div class="ui-block-b"><img src="media/sls_leave.png" width="98%" height="95%"></div>
+      </div>
+      <br>
+      <div data-role="collapsible">
+        <h3>아르테미스 계획</h3>
+        <p>
+          트럼프 행정부가 부활 시킨 <strong>달탐사 계획</strong>으로 <br>
+          <strong>2024년</strong> 달에 다시 유인착륙을 하는것을 목표로 하고있다. <br>
+          Space X의 STARSHIP은 이 계획에 사용될 <strong>달착륙선의 후보 3가지중 하나</strong>로 지정되었다.
+          <img src="media/artemis.jpg" id="expand">
+        </p>
+      </div>
+    </div>
+    <div class="bubble" id="sls_bub1">
+      1961 ~ 1972년 진행된 <strong>아폴로 프로젝트</strong>
+    </div>
+  </div>
+
+  <!--=================================================================================================================================================-->
+</body>
+
+</html>
